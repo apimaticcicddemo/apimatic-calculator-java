@@ -106,14 +106,14 @@ The singleton instance of the ``` SimpleCalculatorController ``` class can be ac
 SimpleCalculatorController simpleCalculator = client.getSimpleCalculator();
 ```
 
-### <a name="get_calculate_for_cicd_demo_v2_async"></a>![Method: ](https://apidocs.io/img/method.png "io.apimatic.examples.controllers.SimpleCalculatorController.getCalculateForCICDDemoV2Async") getCalculateForCICDDemoV2Async
+### <a name="get_cicd_demo_for_calculator_async"></a>![Method: ](https://apidocs.io/img/method.png "io.apimatic.examples.controllers.SimpleCalculatorController.getCICDDemoForCalculatorAsync") getCICDDemoForCalculatorAsync
 
 > Calculates the expression using the specified operation.
 
 
 ```java
-void getCalculateForCICDDemoV2Async(
-        final GetCalculateForCICDDemoV2Input input,
+void getCICDDemoForCalculatorAsync(
+        final GetCICDDemoForCalculatorInput input,
         final APICallBack<Double> callBack)
 ```
 
@@ -129,7 +129,7 @@ void getCalculateForCICDDemoV2Async(
 #### Example Usage
 
 ```java
-GetCalculateForCICDDemoV2Input collect = new GetCalculateForCICDDemoV2Input();
+GetCICDDemoForCalculatorInput collect = new GetCICDDemoForCalculatorInput();
 
 OperationTypeEnum operation = OperationTypeEnum.fromString("MULTIPLY");
 collect.setOperation(operation);
@@ -141,7 +141,7 @@ double y = 5;
 collect.setY(y);
 
 // Invoking the API call with sample inputs
-simpleCalculator.getCalculateForCICDDemoV2Async(collect, new APICallBack<Double>() {
+simpleCalculator.getCICDDemoForCalculatorAsync(collect, new APICallBack<Double>() {
     public void onSuccess(HttpContext context, Double response) {
         // TODO success callback handler
     }

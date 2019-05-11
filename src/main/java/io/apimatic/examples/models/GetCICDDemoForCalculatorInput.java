@@ -12,9 +12,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.ALWAYS)
-public class GetCalculateForCICDDemoV2Input 
+public class GetCICDDemoForCalculatorInput 
         implements java.io.Serializable {
-    private static final long serialVersionUID = 6937083219533253318L;
+    private static final long serialVersionUID = 144514649855193727L;
     private OperationTypeEnum operation;
     private double x;
     private double y;

@@ -54,7 +54,7 @@ public class SimpleCalculatorControllerTest extends ControllerTestBase {
     @Test
     public void testMultiply() throws Throwable {
         // Parameters for the API call
-        GetCalculateForCICDDemoV2Input input = new GetCalculateForCICDDemoV2Input();
+        GetCICDDemoForCalculatorInput input = new GetCICDDemoForCalculatorInput();
         input.setOperation(OperationTypeEnum.fromString("MULTIPLY"));
         input.setX(4d);
         input.setY(5d);
@@ -63,7 +63,7 @@ public class SimpleCalculatorControllerTest extends ControllerTestBase {
         double result = 0;
         controller.setHttpCallBack(httpResponse);
         try {
-            result = controller.getCalculateForCICDDemoV2(input);
+            result = controller.getCICDDemoForCalculator(input);
         } catch(APIException e) {};
 
        // Test whether the response is null
