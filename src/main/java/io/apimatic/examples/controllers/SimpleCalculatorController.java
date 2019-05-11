@@ -42,27 +42,27 @@ public class SimpleCalculatorController extends BaseController {
 
     /**
      * Calculates the expression using the specified operation.
-     * @param    GetCalculateForCICDDemo1Input    Object containing request parameters
+     * @param    GetCalculateForCICDDemoV2Input    Object containing request parameters
      * @return    Returns the Double response from the API call 
      */
-    public Double getCalculateForCICDDemo1(
-                final GetCalculateForCICDDemo1Input input
+    public Double getCalculateForCICDDemoV2(
+                final GetCalculateForCICDDemoV2Input input
     ) throws Throwable {
 
-        HttpRequest _request = _buildGetCalculateForCICDDemo1Request(input);
+        HttpRequest _request = _buildGetCalculateForCICDDemoV2Request(input);
         HttpResponse _response = getClientInstance().executeAsString(_request);
         HttpContext _context = new HttpContext(_request, _response);
 
-        return _handleGetCalculateForCICDDemo1Response(_context);
+        return _handleGetCalculateForCICDDemoV2Response(_context);
     }
 
     /**
      * Calculates the expression using the specified operation.
-     * @param    GetCalculateForCICDDemo1Input    Object containing request parameters
+     * @param    GetCalculateForCICDDemoV2Input    Object containing request parameters
      * @return    Returns the void response from the API call 
      */
-    public void getCalculateForCICDDemo1Async(
-                final GetCalculateForCICDDemo1Input input,
+    public void getCalculateForCICDDemoV2Async(
+                final GetCalculateForCICDDemoV2Input input,
                 final APICallBack<Double> callBack
     ) {
         Runnable _responseTask = new Runnable() {
@@ -70,7 +70,7 @@ public class SimpleCalculatorController extends BaseController {
 
                 HttpRequest _request;
                 try {
-                    _request = _buildGetCalculateForCICDDemo1Request(input);
+                    _request = _buildGetCalculateForCICDDemoV2Request(input);
                 } catch (Exception e) {
                     callBack.onFailure(null, e);
                     return;
@@ -80,7 +80,7 @@ public class SimpleCalculatorController extends BaseController {
                 getClientInstance().executeAsStringAsync(_request, new APICallBack<HttpResponse>() {
                     public void onSuccess(HttpContext _context, HttpResponse _response) {
                         try {
-                            Double returnValue = _handleGetCalculateForCICDDemo1Response(_context);
+                            Double returnValue = _handleGetCalculateForCICDDemoV2Response(_context);
                             callBack.onSuccess(_context, returnValue);
                         } catch (Exception e) {
                             callBack.onFailure(_context, e);
@@ -100,10 +100,10 @@ public class SimpleCalculatorController extends BaseController {
     }
 
     /**
-     * Builds the HttpRequest object for getCalculateForCICDDemo1
+     * Builds the HttpRequest object for getCalculateForCICDDemoV2
      */
-    private HttpRequest _buildGetCalculateForCICDDemo1Request(
-                final GetCalculateForCICDDemo1Input input) throws IOException, APIException {
+    private HttpRequest _buildGetCalculateForCICDDemoV2Request(
+                final GetCalculateForCICDDemoV2Input input) throws IOException, APIException {
         //the base uri for api requests
         String _baseUri = Configuration.baseUri;
 
@@ -140,10 +140,10 @@ public class SimpleCalculatorController extends BaseController {
     }
 
     /**
-     * Processes the response for getCalculateForCICDDemo1
+     * Processes the response for getCalculateForCICDDemoV2
      * @return An object of type void
      */
-    private Double _handleGetCalculateForCICDDemo1Response(HttpContext _context)
+    private Double _handleGetCalculateForCICDDemoV2Response(HttpContext _context)
             throws APIException, IOException {
         HttpResponse _response = _context.getResponse();
 
